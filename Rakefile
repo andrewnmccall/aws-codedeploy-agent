@@ -130,7 +130,7 @@ end
 
 # Clean up
 task :clean do
-  rm_rf 'deployment'
-  rm_rf 'pkg'
-  rm_rf 'vendor-thirdparty'
+  # rm_rf 'deployment'
+  # rm_rf 'pkg'
+  # rm_rf 'vendor-thirdparty'
 end
