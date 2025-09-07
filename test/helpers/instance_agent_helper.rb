@@ -24,4 +24,9 @@ class InstanceAgentTestCase < Test::Unit::TestCase
     error = assert_raise(error_type) { yield }
     assert_equal(message, error.message)
   end
+
+  def assert_raised_with_message_that_contains(message, error_type = RuntimeError)
+    error = assert_raise(error_type) { yield }
+    assert_true(error.message.include?(message), "Expected '#{error.message}' to include '#{message}'")
+  end
 end

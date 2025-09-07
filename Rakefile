@@ -4,6 +4,7 @@ require 'rake/testtask'
 require 'rspec/core/rake_task'
 require 'rubygems'
 require 'cucumber'
+require 'fileutils'
 
 # Run all units tests in test/
 desc "Run unit tests in test/"
@@ -130,7 +131,7 @@ end
 
 # Clean up
 task :clean do
-  rm_rf 'deployment'
-  rm_rf 'pkg'
-  rm_rf 'vendor-thirdparty'
+  FileUtils.rm_rf('deployment')
+  FileUtils.rm_rf('pkg')
+  FileUtils.rm_rf('vendor-thirdparty')
 end
